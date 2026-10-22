@@ -5,13 +5,13 @@
 class Cyanotype < Formula
   desc "Generate instruction files for coding agents"
   homepage "https://github.com/cyanotype-dev/cyanotype"
-  version "0.2.0"
+  version "0.3.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cyanotype-dev/cyanotype/releases/download/v0.2.0/cyanotype_0.2.0_darwin_amd64.tar.gz"
-      sha256 "5414c1edf88d605b581e466ff221891ff457556b7e6df0209f0e6c5486d2de53"
+      url "https://github.com/cyanotype-dev/cyanotype/releases/download/v0.3.0/cyanotype_0.3.0_darwin_amd64.tar.gz"
+      sha256 "acc48d12b4dff329b5e13a4829372a36bfc20c56b7b283a2e69296c72cf439b2"
 
       define_method(:install) do
         bin.install "cyanotype"
@@ -19,8 +19,8 @@ class Cyanotype < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cyanotype-dev/cyanotype/releases/download/v0.2.0/cyanotype_0.2.0_darwin_arm64.tar.gz"
-      sha256 "7548218e11f05f0b1cff2d30408467573685336ff4f54d833913c391fd4e14f3"
+      url "https://github.com/cyanotype-dev/cyanotype/releases/download/v0.3.0/cyanotype_0.3.0_darwin_arm64.tar.gz"
+      sha256 "8a2e1efac1d6c1fa2876018850761ef1deacb8dfe148174ff0652c1f59cebd20"
 
       define_method(:install) do
         bin.install "cyanotype"
@@ -31,16 +31,16 @@ class Cyanotype < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cyanotype-dev/cyanotype/releases/download/v0.2.0/cyanotype_0.2.0_linux_amd64.tar.gz"
-      sha256 "4770210a6a1d5b92f047badec882c31dfd73950869c1d5057479e76741eb0727"
+      url "https://github.com/cyanotype-dev/cyanotype/releases/download/v0.3.0/cyanotype_0.3.0_linux_amd64.tar.gz"
+      sha256 "337e42066e4c193525e5b092e3c3efeda34df8e1a43094ae846025323da4c869"
       define_method(:install) do
         bin.install "cyanotype"
         bin.install_symlink "cyanotype" => "cyty"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cyanotype-dev/cyanotype/releases/download/v0.2.0/cyanotype_0.2.0_linux_arm64.tar.gz"
-      sha256 "9fee6651381878dcb846679827d7ae3f37c3fddec00a4a26be5a27b564d4899d"
+      url "https://github.com/cyanotype-dev/cyanotype/releases/download/v0.3.0/cyanotype_0.3.0_linux_arm64.tar.gz"
+      sha256 "074baaf38ab11b863fd6bafa3c26d6996fe611535e4dd6bbf49e986652fd70a5"
       define_method(:install) do
         bin.install "cyanotype"
         bin.install_symlink "cyanotype" => "cyty"
